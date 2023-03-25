@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Countrys = (props) => {
-    const {remove, capital, currencies, flag, languages, name, population, region} = props;
+    const {remove, capital,  flag, name, population, region} = props;
     function  handleDelete(){
         remove(name.common)
     }
