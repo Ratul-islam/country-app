@@ -1,0 +1,49 @@
+:root{
+  --width: clamp(100px, 25vw, 400px);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+nav {
+  display: grid;
+  place-content: center;
+  margin-block: 30px;
+  padding-block: 20px;
+}
+nav input {
+  margin-top: 10px;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.country {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: calc(var(--width)*.031);
+  width: var(--width);
+  padding: calc(var(--width)*.05) ;
+}
+.country img {
+  height: calc(var(--width)*.4);
+  margin: 0 auto;
+}
+.country>div {
+  margin-top: calc(var(--width)*.1);
+}
+.deleteBtn {
+  padding: calc(var(--width)*.031) calc(var(--width)*.1);
+  border: none;
+  font-weight: 700;
+  background-color: coral;
+  margin-block: 10px;
+  cursor: pointer;
+}
+.deleteBtn:active {
+  scale: .9;
+}
