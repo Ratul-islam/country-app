@@ -8,7 +8,6 @@ import {v4 as uuidv4} from 'uuid';
 
 
 
-const url = "https://restcountries.com/v3.1/all"
 
 function App() {
 
@@ -17,7 +16,7 @@ function App() {
   const [error, setError] = useState();
 
   useEffect(()=>{
-      fetch(url)
+      fetch("https://restcountries.com/v3.1/all")
       .then((res) => {
           if(!res.ok){
               throw Error("An Error occurred while fetching Data")
@@ -35,7 +34,7 @@ function App() {
           setError(err.message)
           setIsLoading(false)
       })
-  },[url])
+  })
 
   const handleRemove=(props)=>{
     const newData = datas.filter((data)=> data.data.name.common !== props)
