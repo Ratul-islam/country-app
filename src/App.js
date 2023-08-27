@@ -41,7 +41,6 @@ function App() {
     const newData = datas.filter((data)=> data.data.name.common !== props)
     setDatas(newData)
   }
-console.log(datas)
 
 
   return (
